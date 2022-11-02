@@ -312,7 +312,7 @@ public class cities extends AppCompatActivity implements AdapterView.OnItemSelec
         reff.child(chosen_spinner).child(temall.getText().toString()).push().setValue(mallinfo1);
         CreateSpace();
         Toast.makeText(cities.this, "Successful Insert", Toast.LENGTH_SHORT).show();
-       Clear();
+        Clear();
     }
     private void CreateSpace(){
         spacenumber= Integer.parseInt(teparksnumber.getText().toString().trim());
@@ -320,6 +320,7 @@ public class cities extends AppCompatActivity implements AdapterView.OnItemSelec
         for (int i=0;i<spacenumber;i++){
             sp = new Parkingspace();
             sp.setId("park" + i);
+            sp.setStatus("true");
             ll.add(sp);
         }
         reff.child(chosen_spinner).child(temall.getText().toString()).child("space").setValue(ll);

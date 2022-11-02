@@ -13,13 +13,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.Admin.Parkingspace;
 import com.example.myapplication.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
 public class MyAdapter3 extends RecyclerView.Adapter<MyAdapter3.MyViewHolder> {
+    private final DatabaseReference database= FirebaseDatabase.getInstance().getReference();
 
     Context context;
-   ArrayList<Parkingspace> spaceArrayList;
+    ArrayList<Parkingspace> spaceArrayList;
 
    // private Itemclicklistener xItemlistener;
 
@@ -69,6 +72,8 @@ public class MyAdapter3 extends RecyclerView.Adapter<MyAdapter3.MyViewHolder> {
                     Toast.makeText(view.getContext(), "Not Available" , Toast.LENGTH_SHORT).show();
                 }
                 else
+
+                    //database.child("mallinfo").child("Ajloun").child("Ajlounmall").child("space").child("1").child("status").setValue("false");
                     Toast.makeText(view.getContext(), spacePark.getId()+" OK" , Toast.LENGTH_SHORT).show();
 
             }
@@ -78,7 +83,6 @@ public class MyAdapter3 extends RecyclerView.Adapter<MyAdapter3.MyViewHolder> {
     public int getItemCount() {
         return spaceArrayList.size();
     }
-
 
 
 

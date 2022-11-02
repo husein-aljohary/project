@@ -5,7 +5,7 @@ public class Parkingspace {
     public Parkingspace() {
 
     }
-
+    private String id;
     public String getId() {
         return id;
     }
@@ -14,13 +14,12 @@ public class Parkingspace {
     }
 
 
-    public Parkingspace(String status) {
+    /*public Parkingspace(String status) {
         this.status = status;
-    }
-
-    private String id;
+    }*/
 
 
+    private String status;
     public String getStatus() {
         return status;
     }
@@ -34,5 +33,5 @@ public class Parkingspace {
         this.status = status;
     }
 
-    private String status;
+
 }

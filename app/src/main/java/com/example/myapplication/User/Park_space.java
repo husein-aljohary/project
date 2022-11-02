@@ -69,7 +69,6 @@ public class Park_space extends AppCompatActivity {
 
 
 
-
         database.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
